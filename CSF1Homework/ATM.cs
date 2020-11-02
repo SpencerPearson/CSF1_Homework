@@ -17,6 +17,7 @@ namespace CSF1Homework
             bool success = false;
             while (remaining > 0 && success == false)
             {
+                #region "account login"
                 Console.Write("Please enter your account number: ");
                 string accountNum = Console.ReadLine();
                 if (accountNum == "01478963")
@@ -30,11 +31,13 @@ namespace CSF1Homework
                     bool pinSuccess = false;
                     while (remaining > 0 && pinSuccess == false)
                     {
+                        #region "pin"
                         Console.WriteLine("Welcome, Member Account " + accountNum);
                         Console.Write("Enter your PIN: ");
                         string userPIN = Console.ReadLine();
                         if (userPIN == "123456")
                         {
+                            #region "logged in"
                             Console.WriteLine("Password accepted. Acces granted!");
                             pinSuccess = true;
                             System.Threading.Thread.Sleep(2000);
@@ -155,6 +158,7 @@ namespace CSF1Homework
                                         break;
                                 }
                             } while (repeat);
+                            #endregion
                         }
 
                         else
@@ -175,6 +179,7 @@ namespace CSF1Homework
                         {
 
                         }
+                        #endregion
                     }
                 }
 
@@ -196,6 +201,7 @@ namespace CSF1Homework
                     {
 
                     }
+#endregion
                 }
             }
         }
