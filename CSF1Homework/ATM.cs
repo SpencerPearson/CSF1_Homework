@@ -196,10 +196,7 @@ namespace CSF1Homework
                     if (remaining == 0)
                     {
                         Console.WriteLine("Too many failed attempts. Please try again later.");
-                    }
-                    else
-                    {
-
+                        Environment.Exit(0);
                     }
 #endregion
                 }
